@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkxs2irvmwdoc"]
+
+[ext_resource type="Script" uid="uid://b320spo3lgc7" path="res://server/example_server.gd" id="1_myu5s"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gy6di"]
+
+[node name="ExampleServer" type="Node2D"]
+script = ExtResource("1_myu5s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(267.5, 267.5)
+texture = SubResource("PlaceholderTexture2D_gy6di")
+
+[node name="Camera2D" type="Camera2D" parent="."]

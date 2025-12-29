@@ -1,0 +1,20 @@
+[configuration]
+
+entry_symbol = "syphon_library_init"
+compatibility_minimum = "4.5"
+
+[libraries]
+; Relative paths ensure that our GDExtension can be placed anywhere in the project directory.
+macos.single.debug = "./macos/libgodot-syphon.macos.template_debug.dylib"
+macos.double.debug = "./macos/libgodot-syphon.macos.template_debug.double.dylib"
+macos.single.release = "./macos/libgodot-syphon.macos.template_release.dylib"
+macos.double.release = "./macos/libgodot-syphon.macos.template_release.double.dylib"
+
+[dependencies]
+
+macos.debug = {
+    "res://bin/macos/Syphon.framework" : "Contents/Frameworks"
+}
+macos.release = {
+    "res://bin/macos/Syphon.framework" : "Contents/Frameworks"
+}
