@@ -1,4 +1,4 @@
-# Syphon Server/Client for Godot
+# Syphon Server/Client for Godot 4.5+ (Metal Backend Only)
 
 This GDNative plugin that allows macOS Godot applications to utilize [Syphon](https://syphon.info)
 
