@@ -41,7 +41,7 @@ void PublishFrame(void *server, int64_t metal_texture, int64_t width, int64_t he
 
 	id<MTLCommandBuffer> buffer = [globalCommandQueue commandBuffer];
 
-	[ptr publishFrameTexture:(id<MTLTexture>)metal_texture onCommandBuffer:buffer imageRegion:region flipped:true];
+	[ptr publishFrameTexture:(id<MTLTexture>)metal_texture onCommandBuffer:buffer imageRegion:region flipped:false];
 	[buffer commit];
 }
 
