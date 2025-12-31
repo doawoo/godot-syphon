@@ -7,6 +7,7 @@ void InitNotificationCenter();
 void* CreateSyphonClient(const char* uuid, void* context_prt);
 bool ClientHasFrame(void* client_prt);
 bool ClientIsValid(void* client_prt);
+void StopClient(void* client_prt);
 int64_t ClientGetFrameTexture(void *client_ptr);
 int32_t ClientGetFrameWidth(void *client_ptr);
 int32_t ClientGetFrameHeight(void *client_ptr);

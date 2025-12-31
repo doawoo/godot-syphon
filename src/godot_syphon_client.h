@@ -27,6 +27,7 @@ public:
   void connect_to_server(const String &server_uuid);
 	bool client_is_connected();
 	bool client_has_new_frame();
+	void client_stop();
 	int64_t get_frame_tex_id();
 	int get_frame_width();
 	int get_frame_height();

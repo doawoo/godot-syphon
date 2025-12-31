@@ -10,6 +10,7 @@
 void GodotSyphonClient::_bind_methods() {
 	godot::ClassDB::bind_method(D_METHOD("print_type", "variant"), &GodotSyphonClient::print_type);
 	godot::ClassDB::bind_method(D_METHOD("connect_to_server", "server_uuid"), &GodotSyphonClient::connect_to_server);
+	godot::ClassDB::bind_method(D_METHOD("stop_client"), &GodotSyphonClient::client_stop);
 	godot::ClassDB::bind_method(D_METHOD("has_new_frame"), &GodotSyphonClient::client_has_new_frame);
 	godot::ClassDB::bind_method(D_METHOD("connection_valid"), &GodotSyphonClient::client_is_connected);
 	godot::ClassDB::bind_method(D_METHOD("get_frame_tex_id"), &GodotSyphonClient::get_frame_tex_id);
@@ -20,6 +21,14 @@ void GodotSyphonClient::_bind_methods() {
 
 void GodotSyphonClient::print_type(const Variant &p_variant) const {
 	print_line(vformat("Type: %d", p_variant.get_type()));
+}
+
+void GodotSyphonClient::client_stop()
+{
+	if (this->client_pointer == nullptr) {
+		return;
+	}
+	StopClient(this->client_pointer);
 }
 
 void GodotSyphonClient::connect_to_server(const String &uuid) {

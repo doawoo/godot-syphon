@@ -85,6 +85,12 @@ void *CreateSyphonClient(const char *uuid, void *metal_device) {
 	return client;
 }
 
+void StopClient(void *client_ptr) {
+	SyphonMetalClient *client = (SyphonMetalClient *)client_ptr;
+	[client stop];
+	[client dealloc];
+}
+
 bool ClientHasFrame(void *client_ptr) {
 	SyphonMetalClient *client = (SyphonMetalClient *)client_ptr;
 	return [client hasNewFrame];
